@@ -44,3 +44,6 @@ jobs:
 
       - name: Run Typing Checks
         run: poetry run invoke type
+        
+      - name: Project Setup
+        uses: ./.github/actions/setup
