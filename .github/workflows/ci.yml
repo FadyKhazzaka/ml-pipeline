@@ -36,3 +36,14 @@ jobs:
 
       - name: Run Typing Checks
         run: poetry run mypy src/ tasks.py tests/
+      - name: Run Tests
+        run: poetry run invoke test
+
+      - name: Run Linting
+        run: poetry run invoke lint
+
+      - name: Run Typing Checks
+        run: poetry run invoke type
+        
+      - name: Project Setup
+        uses: ./.github/actions/setup
